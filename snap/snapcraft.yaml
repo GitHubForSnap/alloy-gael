@@ -1,0 +1,34 @@
+name: alloy-gael
+version: "v1.11.3"
+base: core24
+summary: Grafana Alloy open source OpenTelemetry Collector distribution
+description: |
+  Grafana Alloy is an open source OpenTelemetry Collector distribution with built-in Prometheus pipelines and support for metrics, logs, traces, and profiles
+
+grade: stable
+confinement: classic
+
+platforms:
+  amd64:
+
+license: "MPL-2.0"
+
+apps:
+  alloy:
+    command: launcher.sh
+    daemon: simple
+
+parts:
+  launcher:
+    plugin: dump
+    source: snap/local/launcher
+    stage:
+      - launcher.sh
+
+  alloy:
+    plugin: dump
+    source: https://github.com/grafana/alloy/releases/download/v1.11.3/alloy-1.11.3-1.amd64.deb
+    source-type: deb
+
+    prime:
+      - usr/bin/alloy
