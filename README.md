@@ -4,6 +4,8 @@ Grafana Alloy is an open source OpenTelemetry Collector distribution with built-
 
 **First-time users**
 
+* Install Alloy `sudo snap install alloy-gael_vx.y.z_amd64.snap --devmode`
+
 * Configure Alloy `sudo vi /var/snap/alloy-gael/current/config.alloy`
 
 * Restart Alloy `sudo snap restart alloy-gael.alloy`
