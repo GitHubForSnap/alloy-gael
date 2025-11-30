@@ -17,6 +17,7 @@ apps:
   alloy:
     command: launcher.sh
     daemon: simple
+    install-mode: disable
 
 parts:
   launcher:

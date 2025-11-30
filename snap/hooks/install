@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Set basic Alloy options
+cat <<EOF > $SNAP_DATA/options.alloy
+--storage.path=/var/snap/alloy-gael/common/data /var/snap/alloy-gael/current/config.alloy
+EOF
